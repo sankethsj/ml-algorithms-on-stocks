@@ -8,8 +8,6 @@
 }
 
 body{
-    width: 100vw;
-    height: 100vh;
     background-color: #e7e8f7;
-    padding: 2rem;
+    padding: 1rem 2rem;
 }

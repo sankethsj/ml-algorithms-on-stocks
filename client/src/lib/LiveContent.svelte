@@ -1,4 +1,6 @@
 <script>
+    import { apiData } from "../store.js";
+
     let options = { 
         weekday: 'long', 
         year: 'numeric', 
@@ -16,7 +18,10 @@
         currentTimestamp = new Date().toLocaleString("en-IN", options)
     }, 1000);
 
-    let currentPrice = 33524
+    let currentPrice = "Loading...";
+    $: if ($apiData && $apiData.data) {
+        currentPrice = $apiData.data[$apiData.data.length - 1];
+    }
 </script>
 
 <div class="live-content">
@@ -26,11 +31,15 @@
 
 <style>
     .live-content{
-        margin-top: 2rem;
-        width: max-content;
+        margin-top: 0.5rem;
+        width: 300px;
         height: max-content;
     }
+    h3{
+        font-size: 1rem;
+    }
     em{
+        font-size: 0.6rem;
         margin-top: 1rem;
     }
 </style>

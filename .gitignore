@@ -5,6 +5,12 @@
 __pycache__/
 # Ignore Python cache directories
 *.pyo
+
+# Ignore environment variable files
 .env
+*.env
 
 node_modules/
+
+# Ignore virtual environment directories
+venv/

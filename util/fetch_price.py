@@ -14,7 +14,9 @@ def fetch_last_x_days_data(x=120, max=0):
     from_timestamp = str(int((dt.datetime.now()-dt.timedelta(x)).timestamp()))
 
     url = get_1h_url(from_timestamp, to_timestamp)
+    print("Fetching data from URL:", url)
     r = requests.get(url)
+    print("Response status code:", r.status_code)
     data = r.json()
 
     dataClose = data['c']
