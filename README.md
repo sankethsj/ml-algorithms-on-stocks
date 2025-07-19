@@ -2,6 +2,10 @@
 
 This project uses historical data of the Bank Nifty index over the last 10 years to predict future stock prices using Machine Learning models. It features a web-based client to visualize the predictions.
 
+## ✨ Screenshot
+
+![Web App Screenshot](docs/Screenshot%202025-07-19%20101951.png)
+
 ## 🚀 Features
 
 - **Multiple Models**: Implements and experiments with both LSTM (Long Short-Term Memory) and XGBoost models for price prediction.
